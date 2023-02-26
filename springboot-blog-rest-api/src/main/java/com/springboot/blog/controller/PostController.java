@@ -4,11 +4,15 @@ import com.springboot.blog.payload.PostDTO;
 import com.springboot.blog.payload.PostResponse;
 import com.springboot.blog.service.PostService;
 import com.springboot.blog.utils.AppConstants;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/posts")
@@ -20,6 +24,7 @@ public class PostController {
         this.postService = postService;
     }
 
+    @Operation(security = {@SecurityRequirement(name = "bearer-key")})
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<PostDTO> createPost(@Valid @RequestBody PostDTO postDTO) {
@@ -52,5 +57,10 @@ public class PostController {
     public ResponseEntity<String> deletePost(@PathVariable("id") long id) {
         postService.deletePostById(id);
         return new ResponseEntity<>("Post entity deleted successfully", HttpStatus.OK);
+    }
+
+    @GetMapping("/category/{id}")
+    public ResponseEntity<List<PostDTO>> getPostsByCategory(@PathVariable("id") Long categoryId) {
+        return new ResponseEntity<>(postService.getPostsByCategory(categoryId), HttpStatus.OK);
     }
 }
