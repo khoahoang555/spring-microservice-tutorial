@@ -1,0 +1,3 @@
+- Tại sao phải sử dụng spring cloud config:
++ Vì trong 1 project sẽ có nhiều project microservice và trong những microservice thì có thể sẽ có nhiều instance, vậy thì khi muốn thay đổi config ở 1 service cụ thể 
+nào đó thì sẽ phải phải restart lại service và các instance liên quan, do đó spring cloud config ra đời để đóng vai trò là trung gian chứa các config ở các service. 

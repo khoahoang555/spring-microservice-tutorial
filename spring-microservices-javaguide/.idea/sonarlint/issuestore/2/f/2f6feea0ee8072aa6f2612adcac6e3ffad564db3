@@ -1,0 +1,14 @@
+
+m
+java:S36554"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(¥ä¢Ÿ8œˆ½ˆí0
+V	java:S125"<This block of commented-out lines of code should be removed.(ÿ€ú“ÿÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(äÕÌ÷
+X	java:S125'"<This block of commented-out lines of code should be removed.(…ƒ”®8ºö±þì0
+V	java:S1257"<This block of commented-out lines of code should be removed.(éŒÌ˜úÿÿÿÿ
+X	java:S125?"<This block of commented-out lines of code should be removed.(‘ºÑ¬8—æ²þì0
+f
+java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ8ãˆ½ˆí0
+j
+java:S1128"HRemove this unused import 'org.springframework.web.client.RestTemplate'.(Îö¼Þûÿÿÿÿ8äˆ½ˆí0
+y
+java:S1128"WRemove this unused import 'org.springframework.web.reactive.function.client.WebClient'.(¬àŽ•ýÿÿÿÿ8äˆ½ˆí0

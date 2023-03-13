@@ -23,7 +23,7 @@ public class DepartmentController {
         return new ResponseEntity<>(departmentService.saveDepartment(departmentDTO), HttpStatus.CREATED);
     }
 
-    @GetMapping("{department-code}")
+    @GetMapping("/{department-code}")
     public ResponseEntity<DepartmentDTO> getDepartment(@PathVariable("department-code") String departmentCode) {
         return new ResponseEntity<>(departmentService.getDepartmentByCode(departmentCode), HttpStatus.OK);
     }

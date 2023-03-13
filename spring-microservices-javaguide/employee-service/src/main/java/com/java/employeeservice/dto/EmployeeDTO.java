@@ -14,4 +14,5 @@ public class EmployeeDTO {
     private String firstName;
     private String lastName;
     private String email;
+    private String departmentCode;
 }
